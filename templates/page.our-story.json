@@ -13,7 +13,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>FORMA Studio is a furniture & home design brand with a minimal architectural timeless aesthetic.</p>",
+            "text": "<p>Furniture designed to define the room. Made to last a lifetime.</p>",
             "text_style": "body"
           }
         }
@@ -43,21 +43,21 @@
         "col_1": {
           "type": "column",
           "settings": {
-            "title": "design",
-            "text": "We put design first in every decision we make."
+            "title": "minimal",
+            "text": "We put minimal first in every decision we make."
           }
         },
         "col_2": {
           "type": "column",
           "settings": {
-            "title": "minimal",
-            "text": "minimal is not a buzzword for us — it's how we work."
+            "title": "architectural",
+            "text": "architectural is not a buzzword for us — it's how we work."
           }
         },
         "col_3": {
           "type": "column",
           "settings": {
-            "title": "architectural",
+            "title": "timeless",
             "text": "We are transparent about how we make things and who we make them for."
           }
         }
@@ -86,7 +86,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "\"Premium furniture & home design with a minimal design philosophy.\"",
+            "heading": "\"Considered Design · Built to Last · Sustainable Materials · London Studio\"",
             "heading_size": "h2"
           }
         }
