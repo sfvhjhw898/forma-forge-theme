@@ -13,7 +13,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Furniture designed to define the room. Made to last a lifetime.</p>",
+            "text": "<p>Design-led furniture studio. Minimal, architectural, timeless. Spaces worth living in.</p>",
             "text_style": "body"
           }
         }
@@ -86,7 +86,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "\"Considered Design · Built to Last · Sustainable Materials · London Studio\"",
+            "heading": "\"Designed in London. Made to last generations.\"",
             "heading_size": "h2"
           }
         }
