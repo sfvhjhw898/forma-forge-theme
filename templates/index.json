@@ -1,15 +1,62 @@
 {
   "sections": {
     "forge_hero": {
-      "type": "forge-scroll-hero",
+      "type": "main-banner",
       "settings": {
         "heading": "Spaces Worth Living In.",
-        "subheading": "minimal · architectural · timeless — made for Design-conscious homeowners and interior designers aged.",
+        "subheading": "minimal · architectural · timeless — made for Design-conscious homeowners aged 30-50 who buy.",
         "scroll_hint": "Scroll to explore",
         "button_label_1": "Shop Furniture",
         "button_link_1": "shopify://collections/all",
         "button_label_2": "Our Story",
         "button_link_2": "shopify://pages/our-story"
+      }
+    },
+    "forge_ticker": {
+      "type": "forge-ticker-section",
+      "blocks": {
+        "item_0": {
+          "type": "item",
+          "settings": {
+            "text": "Ethically Sourced"
+          }
+        },
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "text": "Small Batch"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "text": "Made With Care"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "text": "FORMA STUDIO"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "text": "Free Shipping Over £100"
+          }
+        }
+      },
+      "block_order": [
+        "item_0",
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "speed": 40,
+        "direction": "ltr"
       }
     },
     "forge_collections": {
@@ -182,6 +229,7 @@
   },
   "order": [
     "forge_hero",
+    "forge_ticker",
     "forge_collections",
     "brand_story",
     "forge_bento",
