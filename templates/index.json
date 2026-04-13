@@ -1,276 +1,75 @@
 {
   "sections": {
-    "forge_hero": {
-      "type": "forge-scroll-hero",
+    "forma_hero": {
+      "type": "forma-hero",
       "settings": {
-        "heading": "OBJECTS WORTH LIVING WITH.",
-        "subheading": "Minimal \u00b7 architectural \u00b7 timeless \u2014 furniture made to order from our London studio.",
-        "scroll_hint": "Scroll to discover",
-        "button_label_1": "Explore the Collection",
-        "button_link_1": "shopify://collections/all",
-        "button_label_2": "Our Studio",
-        "button_link_2": "shopify://pages/our-story"
+        "eyebrow": "Architectural Furniture",
+        "heading": "Objects built to last a lifetime.",
+        "subheading": "Designed in London. Made in Europe. Built without compromise.",
+        "btn_primary_label": "Explore the Collection",
+        "btn_primary_url": "shopify://collections/all",
+        "btn_secondary_label": "Our Process",
+        "btn_secondary_url": "shopify://pages/our-story"
       }
     },
-    "forge_marquee": {
-      "type": "forge-marquee",
-      "settings": {
-        "speed": 40
-      },
+    "forma_materials": {
+      "type": "forma-materials",
+      "settings": { "eyebrow": "Craftsmanship", "heading": "Our Materials", "body": "Every material is selected for longevity, beauty, and honest construction." },
       "blocks": {
-        "p1": {
-          "type": "phrase",
-          "settings": {
-            "phrase": "Handcrafted"
-          }
-        },
-        "p2": {
-          "type": "phrase",
-          "settings": {
-            "phrase": "Sustainably Sourced"
-          }
-        },
-        "p3": {
-          "type": "phrase",
-          "settings": {
-            "phrase": "Made to Order"
-          }
-        },
-        "p4": {
-          "type": "phrase",
-          "settings": {
-            "phrase": "Designed in London"
-          }
-        },
-        "p5": {
-          "type": "phrase",
-          "settings": {
-            "phrase": "10-Year Guarantee"
-          }
-        },
-        "p6": {
-          "type": "phrase",
-          "settings": {
-            "phrase": "Lifetime Pieces"
-          }
-        }
+        "m1": { "type": "material", "settings": { "name": "Solid Oak",    "origin": "FSC Certified", "desc": "Slow-grown European oak. Finished with natural hard-wax oil.", "spec_1_label": "Origin", "spec_1_value": "Germany", "spec_2_label": "Finish",    "spec_2_value": "Hard-wax oil" } },
+        "m2": { "type": "material", "settings": { "name": "Raw Concrete", "origin": "UK Fabricated", "desc": "GFRC panels cast in our London workshop. Each piece unique.",   "spec_1_label": "Weight", "spec_1_value": "Light",   "spec_2_label": "Lead time", "spec_2_value": "3 weeks" } },
+        "m3": { "type": "material", "settings": { "name": "Cold Steel",   "origin": "Recycled 90%",  "desc": "Powder-coated structural steel in 14 colours.",                 "spec_1_label": "Gauge",  "spec_1_value": "3mm",     "spec_2_label": "Options",   "spec_2_value": "14 colours" } }
       },
-      "block_order": [
-        "p1",
-        "p2",
-        "p3",
-        "p4",
-        "p5",
-        "p6"
-      ]
+      "block_order": ["m1", "m2", "m3"]
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "The Permanent Collection",
+        "title": "The Collection",
         "heading_size": "h2",
-        "description": "<p>Considered pieces for considered spaces. No trends. No compromises.</p>",
-        "show_description": true,
-        "description_style": "subtitle",
         "collection": "all",
         "products_to_show": 8,
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
         "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
         "padding_top": 72,
         "padding_bottom": 56
       }
     },
-    "forge_process": {
-      "type": "forge-process",
-      "settings": {
-        "eyebrow": "How It Works",
-        "heading": "Made to order. Made to last.",
-        "padding_top": 80,
-        "padding_bottom": 80
-      },
+    "forma_process": {
+      "type": "forma-process",
+      "settings": { "eyebrow": "How We Make", "heading": "Considered at every stage.", "cta_label": "Visit the Workshop", "cta_url": "shopify://pages/our-story" },
       "blocks": {
-        "s1": {
-          "type": "step",
-          "settings": {
-            "title": "Discover",
-            "body": "Browse our permanent collection or explore the archive. Each piece is available in multiple FSC-certified timbers and powder-coat finishes."
-          }
-        },
-        "s2": {
-          "type": "step",
-          "settings": {
-            "title": "Commission",
-            "body": "Order online or speak to our studio team. We confirm lead time, finish, and delivery method before production begins."
-          }
-        },
-        "s3": {
-          "type": "step",
-          "settings": {
-            "title": "Delivered",
-            "body": "White-glove delivery to your home. Each piece arrives assembled, placed, and ready to live with \u2014 for decades."
-          }
-        }
+        "s1": { "type": "step", "settings": { "title": "Design",  "body": "Every piece starts as a sketch. We design for use, not trends." } },
+        "s2": { "type": "step", "settings": { "title": "Source",  "body": "Materials selected from certified, traceable European suppliers." } },
+        "s3": { "type": "step", "settings": { "title": "Make",    "body": "Hand-crafted in our East London workshop. Lead time: 4-6 weeks." } },
+        "s4": { "type": "step", "settings": { "title": "Deliver", "body": "White-glove delivery. We install, we take the packaging." } }
       },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3"
-      ]
+      "block_order": ["s1", "s2", "s3", "s4"]
     },
-    "forge_bento": {
-      "type": "forge-bento",
+    "forma_about": {
+      "type": "forma-about",
       "settings": {
-        "heading": "Design-Led. Material-First.",
-        "subheading": "FORMA Studio \u2014 minimal, architectural, timeless.",
-        "story_link": "shopify://pages/our-story",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "cell_1_eyebrow": "The FORMA Philosophy",
-        "cell_1_heading": "Furniture designed to disappear into a room.",
-        "cell_1_body": "Great furniture doesn't shout. Every FORMA piece is designed to complement a space, not dominate it. Minimal form, premium materials, and joinery that ages beautifully.",
-        "cell_1_cta": "Visit the Studio \u2192",
-        "cell_2_heading": "FSC Certified Oak",
-        "cell_2_body": "All timber sourced from certified sustainable forests. Kiln-dried for stability. Finished with natural oils.",
-        "cell_3_stat": "10",
-        "cell_3_stat_label": "Year Guarantee",
-        "cell_3_body": "Every piece guaranteed for ten years. Most outlast three generations.",
-        "cell_4_heading": "Powder-Coat Finish",
-        "cell_4_body": "All metal components powder-coated in-house. 12 finishes. Scratch resistant, fade resistant, forever.",
-        "cell_5_heading": "White-Glove Delivery",
-        "cell_5_body": "Free two-person delivery across mainland UK. We assemble, place, and take all packaging with us.",
-        "pill_1": "Free UK Delivery",
-        "pill_2": "10-Year Guarantee",
-        "pill_3": "Sustainable Materials",
-        "pill_4": "London Studio"
+        "eyebrow": "About FORMA",
+        "heading": "Objects designed to outlast the room they're in.",
+        "body": "We started FORMA because we were tired of furniture that looked good in photos and fell apart in reality. Every piece we make is designed for decades of daily use.",
+        "stat_1_number": "12",
+        "stat_1_label": "Years in business",
+        "stat_2_number": "100%",
+        "stat_2_label": "European made",
+        "cta_label": "Read our story",
+        "cta_url": "shopify://pages/our-story"
       }
-    },
-    "forge_collections": {
-      "type": "forge-collection-cards",
-      "blocks": {
-        "card_1": {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Seating",
-            "tagline": "Chairs and sofas that earn their place."
-          }
-        },
-        "card_2": {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Tables",
-            "tagline": "Dining and desk. Precision joinery."
-          }
-        },
-        "card_3": {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Storage",
-            "tagline": "Shelving and sideboards. Form and function."
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
-      "settings": {
-        "heading": "Shop by Room",
-        "subheading": "Every FORMA piece designed to work together.",
-        "color_scheme": "scheme-3",
-        "padding_top": 0,
-        "padding_bottom": 72
-      }
-    },
-    "forge_testimonials": {
-      "type": "forge-testimonials",
-      "settings": {
-        "eyebrow": "Client Homes",
-        "heading": "Objects worth living with.",
-        "padding_top": 72,
-        "padding_bottom": 72
-      },
-      "blocks": {
-        "t1": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "The dining table arrived exactly as specified \u2014 the craftsmanship is exceptional. Solid, precise, and more beautiful in person than online.",
-            "name": "R. Blackwell",
-            "role": "Architect \u00b7 London"
-          }
-        },
-        "t2": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "We commissioned three pieces for a client project. Every one delivered on time, perfectly finished, with zero issues. We'll be back.",
-            "name": "L. Hadley",
-            "role": "Interior Designer \u00b7 Bristol"
-          }
-        },
-        "t3": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "Genuine quality at a price that still feels fair. The materials are exactly what was described and the joinery is flawless.",
-            "name": "P. Watkins",
-            "role": "Verified Buyer \u00b7 Bristol"
-          }
-        }
-      },
-      "block_order": [
-        "t1",
-        "t2",
-        "t3"
-      ]
     },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "New pieces. First to see.",
-            "heading_size": "h2"
-          }
-        },
-        "subheading": {
-          "type": "paragraph",
-          "settings": {
-            "text": "Studio updates, new collections, and early access. Nothing superfluous."
-          }
-        }
+        "heading": { "type": "heading",   "settings": { "heading": "Considered objects for considered spaces.", "heading_size": "h2" } },
+        "sub":     { "type": "paragraph", "settings": { "text": "New pieces, behind-the-scenes, and care guides." } }
       },
-      "block_order": [
-        "heading",
-        "subheading"
-      ],
-      "settings": {
-        "color_scheme": "scheme-5",
-        "full_width": true,
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
+      "block_order": ["heading", "sub"],
+      "settings": { "color_scheme": "scheme-5", "full_width": true, "padding_top": 56, "padding_bottom": 56 }
     }
   },
-  "order": [
-    "forge_hero",
-    "forge_marquee",
-    "featured_collection",
-    "forge_process",
-    "forge_bento",
-    "forge_collections",
-    "forge_testimonials",
-    "newsletter"
-  ]
+  "order": ["forma_hero", "forma_materials", "featured_collection", "forma_process", "forma_about", "newsletter"]
 }
