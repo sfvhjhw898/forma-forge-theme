@@ -1,0 +1,240 @@
+{%- assign cv = product.selected_or_first_available_variant -%}
+
+<div class="fp-wrap">
+
+  <div class="fp-left">
+    <div class="fp-nav">
+      <a class="fp-back" href="{{ routes.collections_url }}">&#8592; Collections</a>
+      <span class="fp-breadcrumb">{{ product.type | default: 'Object' }}</span>
+    </div>
+
+    <div class="fp-header">
+      <h1 class="fp-title">{{ product.title }}</h1>
+      <p class="fp-price">{{ cv.price | money }}</p>
+    </div>
+
+    <div class="fp-desc">{{ product.description }}</div>
+
+    {%- if product.metafields.custom.dimensions != blank -%}
+      <div class="fp-spec-block">
+        <p class="fp-spec-block__label">Dimensions</p>
+        <p class="fp-spec-block__val">{{ product.metafields.custom.dimensions }}</p>
+      </div>
+    {%- endif -%}
+    <div class="fp-spec-block">
+      <p class="fp-spec-block__label">Materials</p>
+      <p class="fp-spec-block__val">{{ product.vendor | default: 'FORMA' }}</p>
+    </div>
+    <div class="fp-spec-block">
+      <p class="fp-spec-block__label">Lead Time</p>
+      <p class="fp-spec-block__val">Made to order — 4–6 weeks</p>
+    </div>
+    <div class="fp-spec-block">
+      <p class="fp-spec-block__label">Availability</p>
+      <p class="fp-spec-block__val">
+        {%- if cv.available -%}In Stock{%- else -%}Available to Order{%- endif -%}
+      </p>
+    </div>
+
+    {%- form 'product', product, id: 'fp-form' -%}
+      {%- for option in product.options_with_values -%}
+        <div class="fp-opt">
+          <p class="fp-opt__label">{{ option.name }}</p>
+          <div class="fp-opt-pills">
+            {%- for value in option.values -%}
+              <label class="fp-pill">
+                <input type="radio" name="option[{{ option.position }}]" value="{{ value }}"
+                  {% if option.selected_value == value %}checked{% endif %}>
+                <span>{{ value }}</span>
+              </label>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endfor -%}
+      <input type="hidden" name="id" value="{{ cv.id }}">
+      <div class="fp-actions">
+        <button type="submit" name="add" class="fp-btn fp-btn--primary">Add to Bag</button>
+        <a href="/pages/contact" class="fp-btn fp-btn--ghost">Request Quote</a>
+      </div>
+    {%- endform -%}
+  </div>
+
+  <div class="fp-right">
+    <div class="fp-grid">
+      {%- for image in product.images limit: 4 -%}
+        <div class="fp-grid__cell{% if forloop.index == 1 %} fp-grid__cell--large{% endif %}">
+          <img src="{{ image | image_url: width: 900 }}"
+            alt="{{ image.alt | escape }}"
+            loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+            class="fp-grid__img">
+        </div>
+      {%- else -%}
+        <div class="fp-grid__cell fp-grid__cell--large">
+          {{ 'product-6' | placeholder_svg_tag: 'fp-grid__img' }}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+</div>
+
+<style>
+.fp-wrap {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  min-height: 100vh;
+  background: #f8f8f6;
+}
+.fp-left {
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border-right: 1px solid #e2e2df;
+  overflow-y: auto;
+}
+.fp-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.fp-back {
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #888;
+  transition: color .2s;
+}
+.fp-back:hover { color: #1a1a1a; }
+.fp-breadcrumb {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #bbb;
+}
+.fp-breadcrumb::before { content: '/ '; }
+.fp-header { }
+.fp-title {
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+}
+.fp-price {
+  font-family: 'Courier New', monospace;
+  font-size: 22px;
+  color: #1a1a1a;
+  margin: 0;
+}
+.fp-desc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #555;
+  border-top: 1px solid #e2e2df;
+  padding-top: 24px;
+}
+.fp-spec-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e2df;
+}
+.fp-spec-block__label {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+.fp-spec-block__val {
+  font-size: 13px;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: right;
+}
+.fp-opt { }
+.fp-opt__label {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0 0 10px;
+}
+.fp-opt-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.fp-pill input { display: none; }
+.fp-pill span {
+  display: block;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all .15s;
+}
+.fp-pill input:checked + span { background: #1a1a1a; color: #f8f8f6; border-color: #1a1a1a; }
+.fp-pill span:hover { border-color: #1a1a1a; }
+.fp-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.fp-btn {
+  padding: 15px 24px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  border: 1px solid #1a1a1a;
+  transition: all .2s;
+  font-family: sans-serif;
+}
+.fp-btn--primary { background: #1a1a1a; color: #f8f8f6; }
+.fp-btn--primary:hover { background: #333; }
+.fp-btn--ghost { background: transparent; color: #1a1a1a; }
+.fp-btn--ghost:hover { background: #1a1a1a; color: #f8f8f6; }
+.fp-right {
+  padding: 24px;
+  overflow-y: auto;
+}
+.fp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  height: 100%;
+}
+.fp-grid__cell { overflow: hidden; }
+.fp-grid__cell--large {
+  grid-column: span 2;
+}
+.fp-grid__img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.fp-grid__cell:hover .fp-grid__img { transform: scale(1.03); }
+@media (max-width: 900px) {
+  .fp-wrap { grid-template-columns: 1fr; }
+  .fp-left { border-right: none; }
+  .fp-right { padding: 16px; }
+  .fp-grid__cell--large { grid-column: span 2; }
+}
+</style>
+
+{% schema %}
+{
+  "name": "FORMA Product",
+  "tag": "section",
+  "class": "forge-product-forma"
+}
+{% endschema %}
