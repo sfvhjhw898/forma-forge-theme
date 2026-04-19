@@ -63,23 +63,20 @@
   }
 
   .card-wrapper {
+    position: relative;
+  }
+
+  .card-wrapper .card {
     background: #F0EDE8;
     padding: 1.5rem;
-    border-radius: 2px;
-    outline: 1px solid transparent;
-    transition: outline-color 0.25s ease, filter 0.25s ease;
-  }
-
-  .card-wrapper:hover {
-    outline-color: #1C1C1C;
-  }
-
-  .card-wrapper:hover .card__media img {
-    filter: saturate(0.8) brightness(0.95);
-  }
-
-  .card__media img {
     transition: filter 0.25s ease;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+  }
+
+  .card-wrapper:hover .card {
+    filter: saturate(0.8) brightness(0.95);
+    outline-color: #1C1C1C;
   }
 {%- endstyle -%}
 

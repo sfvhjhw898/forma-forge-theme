@@ -1,75 +1,239 @@
 {
   "sections": {
-    "forma_hero": {
-      "type": "forma-hero",
+    "forge_hero": {
+      "type": "main-banner",
       "settings": {
-        "eyebrow": "Architectural Furniture",
-        "heading": "Objects built to last a lifetime.",
-        "subheading": "Designed in London. Made in Europe. Built without compromise.",
-        "btn_primary_label": "Explore the Collection",
-        "btn_primary_url": "shopify://collections/all",
-        "btn_secondary_label": "Our Process",
-        "btn_secondary_url": "shopify://pages/our-story"
+        "heading": "Spaces Worth Living In.",
+        "subheading": "minimal · architectural · timeless — made for Design-conscious homeowners aged 30-50 who buy.",
+        "scroll_hint": "Scroll to explore",
+        "button_label_1": "Shop Furniture",
+        "button_link_1": "shopify://collections/all",
+        "button_label_2": "Our Story",
+        "button_link_2": "shopify://pages/our-story"
       }
     },
-    "forma_materials": {
-      "type": "forma-materials",
-      "settings": { "eyebrow": "Craftsmanship", "heading": "Our Materials", "body": "Every material is selected for longevity, beauty, and honest construction." },
+    "forge_ticker": {
+      "type": "forge-ticker-section",
       "blocks": {
-        "m1": { "type": "material", "settings": { "name": "Solid Oak",    "origin": "FSC Certified", "desc": "Slow-grown European oak. Finished with natural hard-wax oil.", "spec_1_label": "Origin", "spec_1_value": "Germany", "spec_2_label": "Finish",    "spec_2_value": "Hard-wax oil" } },
-        "m2": { "type": "material", "settings": { "name": "Raw Concrete", "origin": "UK Fabricated", "desc": "GFRC panels cast in our London workshop. Each piece unique.",   "spec_1_label": "Weight", "spec_1_value": "Light",   "spec_2_label": "Lead time", "spec_2_value": "3 weeks" } },
-        "m3": { "type": "material", "settings": { "name": "Cold Steel",   "origin": "Recycled 90%",  "desc": "Powder-coated structural steel in 14 colours.",                 "spec_1_label": "Gauge",  "spec_1_value": "3mm",     "spec_2_label": "Options",   "spec_2_value": "14 colours" } }
+        "item_0": {
+          "type": "item",
+          "settings": {
+            "text": "Ethically Sourced"
+          }
+        },
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "text": "Small Batch"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "text": "Made With Care"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "text": "FORMA STUDIO"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "text": "Free Shipping Over £100"
+          }
+        }
       },
-      "block_order": ["m1", "m2", "m3"]
+      "block_order": [
+        "item_0",
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "speed": 40,
+        "direction": "ltr"
+      }
+    },
+    "forge_collections": {
+      "type": "forge-collection-cards",
+      "blocks": {
+        "card_1": {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Living Room",
+            "tagline": "Explore our living room — the latest from FORMA Studio."
+          }
+        },
+        "card_2": {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Bedroom",
+            "tagline": "The bedroom range. Core pieces worth keeping."
+          }
+        },
+        "card_3": {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Gift Sets",
+            "tagline": "Perfectly presented gifts from FORMA Studio."
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
+      "settings": {
+        "heading": "Shop the Range",
+        "subheading": "Explore everything FORMA Studio has to offer.",
+        "color_scheme": "scheme-1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "brand_story": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Made to Last Generations.",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FORMA Studio was built on a simple idea: minimal and architectural shouldn't be mutually exclusive. Read about how we got here.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read Our Story",
+            "button_link": "shopify://pages/our-story",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-1",
+        "section_color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "forge_bento": {
+      "type": "forge-bento",
+      "settings": {
+        "heading": "Designed to Last",
+        "subheading": "FORMA Studio — minimal, architectural, timeless.",
+        "story_link": "shopify://pages/our-story",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "cell_1_eyebrow": "The FORMA Standard",
+        "cell_1_heading": "Designed to Define the Room.",
+        "cell_1_body": "FORMA pieces are designed by our London studio and crafted from sustainably sourced hardwoods. Every joint is hand-finished, every surface considered. Furniture built to outlast trends.",
+        "cell_1_cta": "Visit Our Studio →",
+        "cell_2_heading": "Sustainable Materials",
+        "cell_2_body": "Responsibly sourced FSC-certified hardwoods. Beautiful furniture you can feel good about.",
+        "cell_3_stat": "25yr",
+        "cell_3_stat_label": "Guarantee",
+        "cell_3_body": "Every piece backed by a 25-year structural guarantee. Built to last a lifetime.",
+        "cell_4_heading": "White-Glove Delivery",
+        "cell_4_body": "Free assembly and room placement included with every order.",
+        "cell_5_heading": "Designed in London",
+        "cell_5_body": "Our Clerkenwell studio. Every piece designed, prototyped, and refined in-house.",
+        "pill_1": "Free UK Delivery",
+        "pill_2": "10-Year Warranty",
+        "pill_3": "Sustainable Materials",
+        "pill_4": "Free Returns"
+      }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "The Collection",
+        "title": "Featured Pieces",
         "heading_size": "h2",
+        "description": "<p>Our best-selling furniture — made with minimal.</p>",
+        "show_description": true,
+        "description_style": "subtitle",
         "collection": "all",
         "products_to_show": 8,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
         "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "padding_top": 72,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 64,
         "padding_bottom": 56
-      }
-    },
-    "forma_process": {
-      "type": "forma-process",
-      "settings": { "eyebrow": "How We Make", "heading": "Considered at every stage.", "cta_label": "Visit the Workshop", "cta_url": "shopify://pages/our-story" },
-      "blocks": {
-        "s1": { "type": "step", "settings": { "title": "Design",  "body": "Every piece starts as a sketch. We design for use, not trends." } },
-        "s2": { "type": "step", "settings": { "title": "Source",  "body": "Materials selected from certified, traceable European suppliers." } },
-        "s3": { "type": "step", "settings": { "title": "Make",    "body": "Hand-crafted in our East London workshop. Lead time: 4-6 weeks." } },
-        "s4": { "type": "step", "settings": { "title": "Deliver", "body": "White-glove delivery. We install, we take the packaging." } }
-      },
-      "block_order": ["s1", "s2", "s3", "s4"]
-    },
-    "forma_about": {
-      "type": "forma-about",
-      "settings": {
-        "eyebrow": "About FORMA",
-        "heading": "Objects designed to outlast the room they're in.",
-        "body": "We started FORMA because we were tired of furniture that looked good in photos and fell apart in reality. Every piece we make is designed for decades of daily use.",
-        "stat_1_number": "12",
-        "stat_1_label": "Years in business",
-        "stat_2_number": "100%",
-        "stat_2_label": "European made",
-        "cta_label": "Read our story",
-        "cta_url": "shopify://pages/our-story"
       }
     },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
-        "heading": { "type": "heading",   "settings": { "heading": "Considered objects for considered spaces.", "heading_size": "h2" } },
-        "sub":     { "type": "paragraph", "settings": { "text": "New pieces, behind-the-scenes, and care guides." } }
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stay close to FORMA Studio.",
+            "heading_size": "h2"
+          }
+        },
+        "subheading": {
+          "type": "paragraph",
+          "settings": {
+            "text": "New arrivals, behind-the-scenes, and early access. No noise."
+          }
+        }
       },
-      "block_order": ["heading", "sub"],
-      "settings": { "color_scheme": "scheme-5", "full_width": true, "padding_top": 56, "padding_bottom": 56 }
+      "block_order": [
+        "heading",
+        "subheading"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
     }
   },
-  "order": ["forma_hero", "forma_materials", "featured_collection", "forma_process", "forma_about", "newsletter"]
+  "order": [
+    "forge_hero",
+    "forge_ticker",
+    "forge_collections",
+    "brand_story",
+    "forge_bento",
+    "featured_collection",
+    "newsletter"
+  ]
 }
