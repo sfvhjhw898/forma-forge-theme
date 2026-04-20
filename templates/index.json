@@ -1,7 +1,7 @@
 {
   "sections": {
     "forge_hero": {
-      "type": "main-banner",
+      "type": "forge-scroll-hero",
       "settings": {
         "heading": "Spaces Worth Living In.",
         "subheading": "minimal · architectural · timeless — made for Design-conscious homeowners aged 30-50 who buy.",
